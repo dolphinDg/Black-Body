@@ -3,7 +3,7 @@ library("plotrix")
 make.show <- function() {
 	
     cat("Choose temp_to_rgb.txt\n")
-	t <- read.table(file=file.choose())
+    t <- read.table(file=file.choose())
 	draw.plot <- function(i) {
 		plot(c(-1, 1), c(-1,1), type="n",xlab="",ylab="",bty="n",xaxt="n",yaxt="n")
 		draw.circle(0, 0, col = rgb(t[i,2], t[i,3], t[i,4], maxColorValue=255),radius=0.8)
